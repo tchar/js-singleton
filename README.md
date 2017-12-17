@@ -32,8 +32,8 @@ function ff(d){
 	this.d = d;
 }
 
-const SingletonSingle 	= require('js-singleton')(ff, 125);
-const Singleton 		= require('js-singleton')();
+const SingletonSingle = require('js-singleton')(ff, 125);
+const Singleton = require('js-singleton')();
 
 var i1 = SingletonSingle.getInstance();
 var i2 = SingletonSingle.getInstance();
@@ -91,7 +91,7 @@ console.log(aDoorAlso.width, aDoorAlso.height); // Prints 2.3 1.1
 ```javascript
 /**
  *
- * This module is the server module
+ * This module is the server module (server.js)
  * 
  * @author Some Author
  *
@@ -119,10 +119,10 @@ SingletonSinglet.setName("myServer");
  * In another file do
  *
  */
-
- const Singleton = require('js-singleton')();
- const myServer = Singleton.getInstance("myServer");
- // equivalent
- const SingletonSingle = require('js-singleton')("myServer");
- const myServer = SingletonSingle.getInstance();
- ```
+require('/path/to/server');
+const Singleton = require('js-singleton')();
+var myServer = Singleton.getInstance("myServer");
+// equivalent
+const SingletonSingle = require('js-singleton')("myServer");
+var myServer = SingletonSingle.getInstance();
+```
