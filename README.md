@@ -3,7 +3,7 @@ A singleton wrapper for creating single instances of functions.
 
 This module can wrap an arbitrary number of functions in the same
 Singleton meaning you can init everything you need and then just
-use `require('js-singleton');` in other modules and work just fine.
+use `require('js-singleton');` in other modules and it will work just fine.
 
 # Examples
 
