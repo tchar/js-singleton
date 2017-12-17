@@ -1,6 +1,6 @@
 {
   "name": "js-singleton",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A singleton wrapper for creating single instances of functions.",
   "main": "singleton.js",
   "scripts": {
