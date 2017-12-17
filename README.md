@@ -20,7 +20,10 @@ var person = Singleton.getInstance(Person, 'George', 'Clooney');
 console.log(person.firstname, person.lastname); // Prints George Clooney
 
 var anotherPerson = Singleton.getInstance(Person, 'Michael', 'Jackson');
-console.log(anotherPerson.fristname, anotherPerson.lastname); // Prints George Clooney
+console.log(anotherPerson.firstname, anotherPerson.lastname); // Prints George Clooney
+
+var anotherPersonMaybe = Singleton.getInstance(Person);
+console.log(anotherPersonMaybe.firstname, anotherPersonMaybe.lastname); // Prints George Clooney
 ```
 ## Example with getInstance() by passing a string alias of the function via setName()
 ```javascript

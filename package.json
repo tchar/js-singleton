@@ -1,6 +1,6 @@
 {
   "name": "js-singleton",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A singleton wrapper for creating single instances of functions.",
   "main": "singleton.js",
   "scripts": {
@@ -12,8 +12,7 @@
   },
   "keywords": [
     "singleton",
-    "singleton",
-    "wrapper"
+    "singleton wrapper"
   ],
   "author": "Tilemachos Charalampous",
   "license": "MIT",
