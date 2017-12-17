@@ -1,0 +1,28 @@
+{
+  "name": "js-singleton",
+  "version": "0.0.1",
+  "description": "A singleton wrapper for creating single instances of functions.",
+  "main": "singleton.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha ./tests/*.js -t 100000 --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tchar/js-singleton.git"
+  },
+  "keywords": [
+    "singleton",
+    "singleton",
+    "wrapper"
+  ],
+  "author": "Tilemachos Charalampous",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tchar/singleton-js/issues"
+  },
+  "homepage": "https://github.com/tchar/singleton-js#readme",
+  "devDependencies": {
+    "mocha": "^4.0.1",
+    "should": "^13.1.3"
+  }
+}
