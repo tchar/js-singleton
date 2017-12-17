@@ -110,7 +110,7 @@ const SingletonSingle = require('js-singleton')(server, options);
 
 Singleton.setName("myServer", server);
 // equivalent
-SingletonSinglet.setName("myServer");
+SingletonSingle.setName("myServer");
 
 // No need to module.export
 
