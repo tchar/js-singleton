@@ -94,6 +94,55 @@ Singleton.prototype.setName = function(name, Cls){
 	}
 }
 
-/*----------  This module exports an instance of Singleton  ----------*/
+/**
+ *
+ * This is the implementation of the SingletonSingle
+ * function that accepts a function and does what
+ * the Singleton do without needing to pass anything
+ * to getInstance()
+ *
+ */
 
-module.exports = new Singleton();
+var SingletonSingle = function(Cls){
+	if (typeof Cls === "string"){
+		this.cls = singleton.singletonClassNames.get(Cls);
+		this.args = arguments;
+	} else if (typeof Cls === "function"){
+		this.cls = Cls;
+		this.args = arguments;
+	}
+}
+
+/**
+ *
+ * Equivalent implementation of Singleton getInstance
+ *
+ */
+
+SingletonSingle.prototype.getInstance = function(){
+	return singleton.getInstance.apply(singleton, this.args);
+}
+
+/**
+ *
+ * Equivalent implementation of Singleton setName
+ *
+ */
+
+SingletonSingle.prototype.setName = function(name){
+	singleton.setName(name, this.cls);
+}
+
+var singleton = new Singleton();
+
+function singletonWrapper(Cls){
+	if (typeof Cls == "undefined"){
+		return singleton;
+	} else if (typeof Cls === "string" || typeof Cls == "function"){
+		return new SingletonSingle(Cls);
+	}
+}
+
+/*----------  This module exports the singletonWrapper  ----------*/
+
+module.exports = singletonWrapper;
